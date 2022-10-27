@@ -1,0 +1,202 @@
+.card{
+    height: 420px;
+    min-height: 420px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    transition: background 0.8s;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 50px 163px -70px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin:20px 40px;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.cardback{
+    background-color: aliceblue;
+    background: var(--imageUrls) center center repeat, url('https://vignette.wikia.nocookie.net/breaking-bad-tv/images/c/ce/Sp.png/revision/latest?cb=20121016143623') center center repeat;
+    background-size: 330px;
+    background-position: 0px 0px 10px;
+}
+
+.deadcardback{
+    position: relative;
+    background-color: aliceblue;
+    background:var(--imageUrls) center center repeat, url('https://vignette.wikia.nocookie.net/breaking-bad-tv/images/c/ce/Sp.png/revision/latest?cb=20121016143623') center center repeat;
+    filter: grayscale(50%) brightness(80%); 
+    background-size: 330px;
+    background-position: 0px 0px 10px;
+}
+
+.deadcardback::after{
+    content: "";
+    position: absolute;
+    top:auto;
+    left: auto;
+    opacity: 0.4;
+    filter: grayscale(100%) brightness(100%);
+    width: 100%;
+    height:100%;
+    background: url('../images/dead.png') center center no-repeat;
+    background-size: cover;
+}
+
+
+.deadcardback:hover{
+    background: var(--imageUrls) left center repeat;
+    background-size: 530px;
+}
+
+.deadcardback:hover:after{
+    background:none;
+    z-index: -1;
+}
+
+.cardback:hover{
+    background: var(--imageUrls) left center repeat;
+    background-size: 530px;
+}
+
+.cardback:hover h2,
+.cardback:hover .btn,
+.deadcardback:hover h2,
+.deadcardback:hover .btn{
+    opacity: 1;
+}
+
+
+.border{
+    height: 410px;
+    width: 290px;
+    background: transparent;
+    border-radius: 10px;
+    transition: border 1s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align:start;
+}
+
+.border:hover{
+    border: 1px solid white;
+}
+
+h2{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #F6F6F6;
+    text-shadow: 5px 0px 20px black;
+    margin: 20px 20px;
+    opacity: 0;
+    transition: opacity 1s;
+    font-size: 30px;
+}
+
+.btn{
+    filter: none;
+    opacity: 0;
+    border-radius: 4px;
+    background: #A05344;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+    width: 120px;
+    margin: 30px 20px;
+    box-shadow: 10px 0px 30px black;
+    text-shadow: 1px 0px 10px black;
+}
+
+.btn span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+.btn span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btn:hover span{
+  padding-right: 25px;
+}
+  
+.btn:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+  
+
+@media only screen and (max-width:1000px){
+    .card{
+        width: 500px;
+        height: 620px;
+        min-height: 490px;
+    }
+
+    .cardback{
+        background: var(--imageUrls) center center no-repeat;
+        background-size: 450px;
+        background-position: 0px 0px 10px;
+    }
+
+    .deadcardback{
+        background-size: 450px;
+        background-position: 0px 0px 10px;
+    }
+    
+    .deadcardback:hover{
+        background-size: 900px;
+    }
+
+    .cardback:hover{
+        background: var(--imageUrls) left center no-repeat;
+        background-size: 900px;
+    }
+    
+    .border{
+        height: 600px;
+        width: 480px;
+    }
+    
+    .border:hover{
+        border: 1px solid white;
+    }
+
+    h2{
+        text-shadow: 5px 0px 20px black;
+        margin: 30px 30px;
+        font-size: 50px;
+    }
+
+    .btn{
+        font-size: 30px;
+        padding: 15px;
+        transition: all 0.5s;
+        cursor: pointer;
+        width: 200px;
+        margin: 40px 30px;
+        box-shadow: 10px 0px 30px black;
+        text-shadow: 1px 0px 10px black;
+    }
+
+}

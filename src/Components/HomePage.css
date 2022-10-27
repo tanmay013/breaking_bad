@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.homePageMain{
+    background-color: #181818;
+    background-image: url("https://www.transparenttextures.com/patterns/gravel.png");
+    width: 100%;
+    height: 100%;
+    min-height: 120vh;
+}
+
+.CharacterHeading{
+    color: #FBF2CF;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.CardContainer{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeLoader{
+    position: relative;
+    padding-top: 15vh;
+    padding-bottom: 10vh;
+    padding-left:10%;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width:1000px){
+
+    .CharacterHeading{
+        font-size: 45px;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    .homeLoader{
+        position: relative;
+        padding-top: 25%;
+        padding-bottom: 5%;
+        justify-content:center;
+    }
+}
